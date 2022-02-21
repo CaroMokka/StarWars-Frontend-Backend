@@ -1,24 +1,26 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-
 import "../../styles/home.css";
 import { Carousel } from "../component/carousel";
-
+import { Jumbotron } from "../component/jumbotron";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="container mt-5">
+  return (
+    <div className="container-fluid">
+      <Carousel />
 
-			<Carousel/>
+      <hr className="border border-6 border-light" />
 
-			<hr className="border border-1"/>
-			
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-		
-		</div>
-	);
+    
+      <Jumbotron />
+      
+
+      <div className="alert alert-info">
+        {store.message ||
+          "Loading message from the backend (make sure your python backend is running)..."}
+      </div>
+    </div>
+  );
 };

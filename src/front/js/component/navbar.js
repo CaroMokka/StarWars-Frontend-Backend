@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import sw  from "../../img/logo.png";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
   return (
 
-      <div className="container-fluid bg-black bg-opacity-50">
+      <div className="container-fluid bg-black">
         <div className="row">
           <div className="col-3">
             <Link to="/">
-			<img className="w-50" src={sw} />
+			<img className="logo my-2" src={sw} />
             </Link>
           </div>
 		  <div className="col-6 d-flex justify-content-center my-auto">

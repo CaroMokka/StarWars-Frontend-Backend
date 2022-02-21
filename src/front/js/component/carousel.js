@@ -31,10 +31,10 @@ export const Carousel = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/star-wars-the-high-republic-13-cover_TALL-1536x512.jpg" className="d-block w-100" alt="..." />
+          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/darth-vader-20-cover_TALL-1536x512.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
-            <h2>Avar Kriss Dances with the Darkness in Marvels Star Wars: The High Republic #13  Exclusive Preview </h2>
-            <p>As Aphra is about to discover, its more technological marvel than ritualistic magic.</p>
+            <h2>Padmés Handmaiden Hunts a Sith Lord in Marvels Darth Vader #20  Exclusive Preview</h2>
+            <p>While Sabé searches for clues, Vader tracks Crimson Dawn.</p>
           </div>
         </div>
         <div className="carousel-item">
