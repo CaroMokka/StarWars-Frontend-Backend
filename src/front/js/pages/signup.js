@@ -5,8 +5,8 @@ import "../../styles/signup.css";
 export const Signup = () => {
   return (
     <div className="container mt-5">
-      <div className="box-signup rounded-3">
-        <form className="form d-flex flex-column col-4 bg-black bg-opacity-75 p-4 m-5">
+      <div className="box-signup p-5 rounded-3">
+        <form className="form d-flex flex-column col-4 bg-black bg-opacity-75 p-4">
           <hr className="border border-1" />
           <h2 className="text-center text-warning">Sign Up</h2>
           <hr className="border border-1" />
