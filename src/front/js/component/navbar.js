@@ -4,8 +4,8 @@ import sw  from "../../img/logo.png";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar-light bg-dark">
-      <div className="container-fluid">
+
+      <div className="container-fluid bg-black bg-opacity-50">
         <div className="row">
           <div className="col-3">
             <Link to="/">
@@ -29,6 +29,6 @@ export const Navbar = () => {
          
         </div>
       </div>
-    </nav>
+
   );
 };
