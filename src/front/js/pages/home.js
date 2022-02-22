@@ -17,13 +17,11 @@ export const Home = () => {
 
       <div className="my-4"></div>
 
-    
       <Jumbotron />
-	  <div className="my-4"></div>
-	  <GroupCards/>
-	  <div className="my-4"></div>
-	  <BannerDown/>
-      
+      <div className="my-4"></div>
+      <GroupCards />
+      <div className="my-4"></div>
+      <BannerDown />
 
       <div className="alert alert-info">
         {store.message ||

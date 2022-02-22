@@ -16,11 +16,11 @@ export const Navbar = () => {
           <Link to="/characters" style={{ textDecoration: "none" }}>
             <span className="text-light mx-3 fw-light">CHARACTERS</span>
           </Link>
-          <div class="vr text-white"></div>
+          <div className="vr text-white"></div>
           <Link to="/planets" style={{ textDecoration: "none" }}>
             <span className="text-light mx-3 fw-light">PLANETS</span>
           </Link>
-          <div class="vr text-white"></div>
+          <div className="vr text-white"></div>
           <Link to="/starships" style={{ textDecoration: "none" }}>
             <span className="text-light mx-3 fw-light">STARSHIPS</span>
           </Link>
