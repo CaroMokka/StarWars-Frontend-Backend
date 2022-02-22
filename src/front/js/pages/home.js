@@ -1,8 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/home.css";
+/* components */
 import { Carousel } from "../component/carousel";
 import { Jumbotron } from "../component/jumbotron";
+import { GroupCards } from "../component/group-cards";
+import { BannerDown } from "../component/bannerDown";
+/* styles */
+import "../../styles/home.css";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -11,10 +15,14 @@ export const Home = () => {
     <div className="container-fluid">
       <Carousel />
 
-      <hr className="border border-6 border-light" />
+      <div className="my-4"></div>
 
     
       <Jumbotron />
+	  <div className="my-4"></div>
+	  <GroupCards/>
+	  <div className="my-4"></div>
+	  <BannerDown/>
       
 
       <div className="alert alert-info">

@@ -3,7 +3,7 @@ import "../../styles/jumbotron.css";
 
 export const Jumbotron = () => {
   return (
-    <div className="container bg-black bg-opacity-50 p-4">
+    <div className="container bg-black bg-opacity-50">
       <div className="box-jumbotron">
         <div className="jumbotron">
           <div className="col-6 d-flex flex-column align-items-center p-4">
