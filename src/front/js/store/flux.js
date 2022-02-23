@@ -5,7 +5,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters: [],
 			detailcharacter:{},
 			planets: [],
-			detailplanet: {}
+			detailplanet: {},
+			starships: [],
+			detailstarship: {},
+			favorites:[]
 		},
 		actions: {
 			
@@ -40,6 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				.catch(error => console.log("error", error));
 			},
+			//---------------------------> GET Planets
 			getPlanets: async () => {
 				await fetch("https://www.swapi.tech/api/planets")
 					.then(response => response.json())
@@ -52,11 +56,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 					)
 					.catch(error => console.log("error", error));
 			},
+			//---------------------------> GET Detail Planet
 			getDetailPlanet: async (id) => {
 				await fetch(`https://www.swapi.tech/api/planets/${id}`)
 				.then(response => response.json())
 				.then(resultado => {
 					setStore({ detailplanet: resultado.result.properties });
+					console.log(resultado);
+				})
+				.catch(error => console.log("error", error));
+			},
+			//---------------------------> GET Starships
+			getStarships: async () => {
+				await fetch("https://www.swapi.tech/api/starships")
+					.then(response => response.json())
+					.then(
+						resultado => {
+							console.log(resultado.results);
+							setStore({ starships: resultado.results });
+						}
+						/*console.log(resultado)*/
+					)
+					.catch(error => console.log("error", error));
+			},
+			//---------------------------> GET Detail Planet
+			getDetailStarship: async (id) => {
+				await fetch(`https://www.swapi.tech/api/starships/${id}`)
+				.then(response => response.json())
+				.then(resultado => {
+					setStore({ detailstarship: resultado.result.properties });
 					console.log(resultado);
 				})
 				.catch(error => console.log("error", error));

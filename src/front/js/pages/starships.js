@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+/* components */
 import { BannerUp } from "../component/bannerUp";
 import { Title } from "../component/title";
+import { Card } from "../component/card";
 
 export const Starships = () => {
+  const { store, actions} = useContext(Context);
   return (
     <div className="container-fluid">
       <BannerUp
@@ -11,7 +15,21 @@ export const Starships = () => {
         }
         name={"STARSHIPS"}
       />
-      <Title name={"Starships"}/>
+      <Title name={"STARSHIPS"}/>
+      <div className="container d-flex justify-content-center flex-wrap">
+        {store.starships.map((item, index) => {
+          return (
+            <Card
+              key={index}
+              name={item.name}
+              img={`https://starwars-visualguide.com/assets/img/starships/${
+                index + 1
+              }.jpg`}
+              detail={`/detailStarship/${index + 1}`}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

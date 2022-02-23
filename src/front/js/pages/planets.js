@@ -15,7 +15,7 @@ export const Planets = () => {
         }
         name={"PLANETS"}
       />
-      <Title name={"Planets"}/>
+      <Title name={"PLANETS"}/>
       <div className="container d-flex justify-content-center flex-wrap">
         {store.planets.map((item, index) => {
           return (

@@ -17,7 +17,7 @@ export const Characters = () => {
         }
         name={"CHARACTERS"}
       />
-      <Title name={"Characters"}/>
+      <Title name={"CHARACTERS"}/>
       <div className="container d-flex justify-content-center flex-wrap">
         {store.characters.map((item, index) => {
           return (
