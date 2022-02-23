@@ -49,7 +49,7 @@ export const Signup = () => {
           <h3 className="text-center text-warning">Create Your Account</h3>
           <hr className="border border-1 m-2" />
           <div className="form-group">
-            <label className="text-light p-2 mt-3 h5">User Name</label>
+            <label className="text-light p-2 m-0">User Name</label>
             <input
               type="text"
               className="form-control"
@@ -58,9 +58,11 @@ export const Signup = () => {
               onChange={handleChange}
               value={user.username}
             />
+             
           </div>
+          {!validation && <p className="text-danger text-center m-0">Required</p>}
           <div className="form-group">
-            <label className="text-light p-2 mt-3 h5">Name</label>
+            <label className="text-light p-2 m-0">Name</label>
             <input
               type="text"
               className="form-control"
@@ -69,9 +71,11 @@ export const Signup = () => {
               onChange={handleChange}
               value={user.name}
             />
+            
           </div>
+          {!validation && <p className="text-danger text-center m-0">Required</p>}
           <div className="form-group">
-            <label className="text-light p-2 mt-3 h5">Email</label>
+            <label className="text-light p-2 m-0">Email</label>
             <input
               type="email"
               className="form-control"
@@ -81,8 +85,9 @@ export const Signup = () => {
               value={user.email}
             />
           </div>
+          {!validation && <p className="text-danger text-center m-0">Required</p>}
           <div className="form-group">
-            <label className="text-light p-2 mt-3 h5">Password</label>
+            <label className="text-light p-2 m-0">Password</label>
             <input
               type="password"
               className="form-control"
@@ -92,6 +97,7 @@ export const Signup = () => {
               value={user.password}
             />
           </div>
+          {!validation && <p className="text-danger text-center m-0">Required</p>}
 
           <button type="submit" className="btn btn-outline-warning my-4">
             Create Account
