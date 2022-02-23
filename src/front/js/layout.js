@@ -17,6 +17,7 @@ import { Characters } from "./pages/characters";
 import { Planets } from "./pages/planets";
 import { Starships } from "./pages/starships";
 import { DetailCharacter } from "./pages/detailCharacter";
+import { DetailPlanet } from "./pages/detailPlanet";
 
 //create your first component
 const Layout = () => {
@@ -53,6 +54,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/detailCharacter/:id">
 							<DetailCharacter />
+						</Route>
+						<Route exact path="/detailPlanet/:id">
+							<DetailPlanet />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

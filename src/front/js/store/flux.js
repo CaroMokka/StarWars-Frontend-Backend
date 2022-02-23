@@ -3,7 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			message: null,
 			characters: [],
-			detailcharacter:{}
+			detailcharacter:{},
+			planets: [],
+			detailplanet: {}
 		},
 		actions: {
 			
@@ -34,6 +36,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(response => response.json())
 				.then(resultado => {
 					setStore({ detailcharacter: resultado.result.properties });
+					console.log(resultado);
+				})
+				.catch(error => console.log("error", error));
+			},
+			getPlanets: async () => {
+				await fetch("https://www.swapi.tech/api/planets")
+					.then(response => response.json())
+					.then(
+						resultado => {
+							console.log(resultado.results);
+							setStore({ planets: resultado.results });
+						}
+						/*console.log(resultado)*/
+					)
+					.catch(error => console.log("error", error));
+			},
+			getDetailPlanet: async (id) => {
+				await fetch(`https://www.swapi.tech/api/planets/${id}`)
+				.then(response => response.json())
+				.then(resultado => {
+					setStore({ detailplanet: resultado.result.properties });
 					console.log(resultado);
 				})
 				.catch(error => console.log("error", error));

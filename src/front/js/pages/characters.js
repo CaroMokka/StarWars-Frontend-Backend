@@ -4,15 +4,21 @@ import { Context } from "../store/appContext";
 /* components */
 import { BannerUp } from "../component/bannerUp";
 import { Card } from "../component/card";
+import { Title } from "../component/title";
 
 export const Characters = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-      <BannerUp />
-      <hr className="my-2"></hr>
-      <div className="row">
+    <div className="container-fluid">
+      <BannerUp
+        img={
+          "https://starwarsblog.starwars.com/wp-content/uploads/2021/08/jedi-name-scramble-COLLAGE_TALL-RATIOS-BLASTER-DOOR-1536x512.jpg"
+        }
+        name={"CHARACTERS"}
+      />
+      <Title name={"Characters"}/>
+      <div className="container d-flex justify-content-center flex-wrap">
         {store.characters.map((item, index) => {
           return (
             <Card
@@ -22,9 +28,7 @@ export const Characters = () => {
                 index + 1
               }.jpg`}
               detail={`/detailCharacter/${index + 1}`}
-            
             />
-            
           );
         })}
       </div>

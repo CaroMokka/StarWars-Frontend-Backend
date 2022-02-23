@@ -4,14 +4,15 @@ import { DetailCharacter } from "../pages/detailCharacter";
 
 export const Card = (props) => {
   return (
-    <div>
+
       <div
-        className="card text-center text-white bg-dark m-3"
+        className="card text-center text-white bg-black bg-opacity-75 border-warning m-3"
         style={{ width: "18rem" }}
       >
         <img src={props.img} className="card-img-top" />
         <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
+          <h4 className="card-title">{props.name}</h4>
+          <hr className="my-2 text-warning"/>
           <p className="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
@@ -28,6 +29,6 @@ export const Card = (props) => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 /* components */
 import { CardDetail } from "../component/cardDetail";
+import "../../styles/detailCharacter.css";
 
 export const DetailCharacter = () => {
   const { store, actions } = useContext(Context);
@@ -13,16 +14,23 @@ export const DetailCharacter = () => {
   }, []);
 
   return (
-    <div className="container">
-      <CardDetail
-        name={store.detailcharacter.name}
-        img={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
-        date={store.detailcharacter.birth_year}
-        height={store.detailcharacter.height}
-        hair_color={store.detailcharacter.hair_color}
-        eye_color={store.detailcharacter.eye_color}
-        skin_color={store.detailcharacter.skin_color}
-      />
+    <div className="container-fluid">
+      <div className="row bg-dark">
+        {" "}
+        <div className="col-6">
+          <CardDetail
+            name={store.detailcharacter.name}
+            img={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+            date={"Birthdate:" + " " +  store.detailcharacter.birth_year}
+            height={"Height:" + " " + store.detailcharacter.height}
+            hair_color={"Hair:" + " " +  store.detailcharacter.hair_color}
+            eye_color={"Eyes:" + " " + store.detailcharacter.eye_color}
+            skin_color={"Skin:" + " " + store.detailcharacter.skin_color}
+          />
+        </div>
+      </div>
     </div>
   );
 };
+
+/* {`mode${modeNumber}`} */
