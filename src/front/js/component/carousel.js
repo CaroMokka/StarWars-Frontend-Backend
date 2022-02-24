@@ -31,14 +31,14 @@ export const Carousel = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/darth-vader-20-cover_TALL-1536x512.jpg" className="d-block w-100" alt="..." />
+          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/the-book-of-boba-fett-ch-5-cargo-hold-TALL-1-1536x512.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h2>Padmés Handmaiden Hunts a Sith Lord in Marvels Darth Vader #20  Exclusive Preview</h2>
             <p>While Sabé searches for clues, Vader tracks Crimson Dawn.</p>
           </div>
         </div>
         <div className="carousel-item">
-          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/the-book-of-boba-fett-ch-5-cargo-hold-TALL-1-1536x512.jpg" className="d-block w-100" alt="..." />
+          <img src="https://starwarsblog.starwars.com/wp-content/uploads/2022/01/darth-vader-20-cover_TALL-1536x512.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h2>The Book of Boba Fett Cargo Hold: “Chapter 5: Return of the Mandalorian”</h2>
             <p>Check out concept art, stills, and more from the fifth episode of the series.</p>
@@ -74,6 +74,8 @@ export const Carousel = () => {
   );
 };
 
+/* https://starwarsblog.starwars.com/wp-content/uploads/2022/01/darth-vader-20-cover_TALL-1536x512.jpg
+ */
 {
   /* <div className="container">
       <div

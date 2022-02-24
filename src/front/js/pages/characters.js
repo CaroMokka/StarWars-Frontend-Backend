@@ -9,6 +9,12 @@ import { Title } from "../component/title";
 export const Characters = () => {
   const { store, actions } = useContext(Context);
 
+
+  //DEclarar la function de AddFavs
+  /* const handleFavs = () => {
+    actions.addFav(item.name);
+  } */
+
   return (
     <div className="container-fluid">
       <BannerUp
@@ -28,6 +34,10 @@ export const Characters = () => {
                 index + 1
               }.jpg`}
               detail={`/detailCharacter/${index + 1}`}
+              btn={ () => {actions.addFav(item.name);} }
+             
+         
+    
             />
           );
         })}

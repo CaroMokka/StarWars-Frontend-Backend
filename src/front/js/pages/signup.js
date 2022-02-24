@@ -60,7 +60,7 @@ export const Signup = () => {
             />
              
           </div>
-          {!validation && <p className="text-danger text-center m-0">Required</p>}
+          {!validation && <p className="text-danger text-center m-0">Please enter your username</p>}
           <div className="form-group">
             <label className="text-light p-2 m-0">Name</label>
             <input
@@ -73,7 +73,7 @@ export const Signup = () => {
             />
             
           </div>
-          {!validation && <p className="text-danger text-center m-0">Required</p>}
+          {!validation && <p className="text-danger text-center m-0">Please enter your name</p>}
           <div className="form-group">
             <label className="text-light p-2 m-0">Email</label>
             <input
@@ -85,7 +85,7 @@ export const Signup = () => {
               value={user.email}
             />
           </div>
-          {!validation && <p className="text-danger text-center m-0">Required</p>}
+          {!validation && <p className="text-danger text-center m-0">Please enter your email</p>}
           <div className="form-group">
             <label className="text-light p-2 m-0">Password</label>
             <input
@@ -97,7 +97,7 @@ export const Signup = () => {
               value={user.password}
             />
           </div>
-          {!validation && <p className="text-danger text-center m-0">Required</p>}
+          {!validation && <p className="text-danger text-center m-0">Please enter your password</p>}
 
           <button type="submit" className="btn btn-outline-warning my-4">
             Create Account
